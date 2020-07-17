@@ -2,8 +2,9 @@
 \usepackage{luatexja-fontspec}
 \usepackage{amsthm}
 \usepackage{enumitem}
-\usepackage{sty/nogutaku}
+\usepackage{sty/mathnotation}
 \usepackage[colorlinks=true,unicode,linkbordercolor={0 0 0}]{hyperref}
+\usepackage{amsmath,amssymb}
 \usepackage{cleveref}
 \usepackage{authblk}
 \usepackage[margin=25mm,truedimen]{geometry}
@@ -18,6 +19,7 @@
 \newcommand*{\length}[1]{\overline{#1}}
 \newcommand*{\equivalent}{\Longleftrightarrow}
 \newcommand*{\coord}[1]{\paren{#1}}
+\DeclareMathOperator{\Image}{Im}
 %
 %
 %
@@ -65,18 +67,19 @@ labelindent = \parindent
 
 \begin{itemize}
   \item 点を表す記号は高校の教科書ではローマン体で$\mathrm{A}, \mathrm{B}, \dotsc$のように
-    書かれることが多いが，この記事では通常の変数と同じく$A,B, \dotsc$のようにイタリック体で表記する．
+        書かれることが多いが，この記事では通常の変数と同じく$A,B, \dotsc$のようにイタリック体で表記する．
   \item なんらかの対象に関する条件$\varphi$に対し，対象$x$が条件$\varphi$を満たすという主張を$\apply{\varphi}{x}$と表す．
   \item 集合$S$と条件$\varphi$に対し，$\varphi$を満たす$S$の元全体の集合を$\setintension{x \in S}{\apply{\varphi}{x}}$と表す．
   \item 平面上の点$A,B$に対し，線分$AB$の長さを$\length{AB}$と表す．$\length{AB}$は$A,B$の距離に相当する．
   \item 実数全体の集合を$\Real$で，（ユークリッド）平面を$\Real ^2$でそれぞれ表す．
-    $x \in \Real$は$x$が実数であることを，$P \in \Real ^2$は$P$が平面上の点であることをそれぞれ表す．
+        $x \in \Real$は$x$が実数であることを，$P \in \Real ^2$は$P$が平面上の点であることをそれぞれ表す．
   \item 「座標が$\coord{a,b}$であるような点$P$」を高校の教科書ではよく「点$P{\coord{a,b}}$」などと表すようであるが，
-    この記事では「$P = \coord{a,b}$」と表すこととする．筆者個人としては「$P{\coord{a,b}}$」なる表記は意味がよくわからないので好きではない．
+        この記事では「$P = \coord{a,b}$」と表すこととする．筆者個人としては「$P{\coord{a,b}}$」なる表記は意味がよくわからないので好きではない．
   \item 2つの主張$\varphi, \psi$について，$\varphi$が真であるならば必ず$\psi$も真であること，
-    および$\varphi$と$\psi$が同値であることをそれぞれ$\varphi \implies \psi$と$\varphi \equivalent \psi$で表す．
+        および$\varphi$と$\psi$が同値であることをそれぞれ$\varphi \implies \psi$と$\varphi \equivalent \psi$で表す．
   \item $x < y$または$x = y$であることを表す不等号として$x \leq y$を用いる．
   \item この記事では，特に断らない限り「平面上の点」を単に「点」と表すことがある．
+  \item 集合と写像に関する基本的な知識や記法は既知とする．また，写像$f$の値域を$\Image f$と表す．
 \end{itemize}
 
 
@@ -125,7 +128,7 @@ labelindent = \parindent
   $\length{AP}^2 = 4 \length{BP}^2$だから
   \begin{align*}
     \paren{x + 2}^2 + y^2 & = 4\paren{\paren{x - 4}^2 + y^2
-  }\end{align*}
+    }\end{align*}
   より
   \begin{align}
     \paren{x - 6}^2 + y^2 = 16
@@ -190,8 +193,8 @@ labelindent = \parindent
 \begin{ans} \label{ans:aplloniusomit}
   平面上の任意の点$P = \coord{x,y}$に対し，
   \begin{align*}
-    & \length{AP} : \length{BP} = 2 : 1 \\
-    \equivalent & \length{AP}^2 = 4 \length{BP}^2 \\
+                & \length{AP} : \length{BP} = 2 : 1                       \\
+    \equivalent & \length{AP}^2 = 4 \length{BP}^2                         \\
     \equivalent & \paren{x + 2}^2 + y^2 = 4 \paren{\paren{x - 4}^2 + y^2} \\
     \equivalent & \paren{x - 6}^2 + y^2 = 16
   \end{align*}
@@ -236,12 +239,7 @@ labelindent = \parindent
 
 \begin{que} \label{que:varpoint}
   点$\coord{2,0}$を中心とする半径2の円$C$と点$A = \coord{4,0}$がある．
-  点$Q$が3点$O, A, Q$が一直線上にない
-  \footnote{%
-    ここを書いていない解説がほとんどなのであるが，
-    書かないとかなり嫌がらせチックな問題文になってしまうので明示しておくこととする．
-  }%
-  ような$C$上の点全体を動くとき，
+  $Q$が3点$O,A,Q$が三角形をなすような$C$上の点全体を動くとき，
   $\triangle OAQ$の重心の軌跡を求めよ．ただし$O$は原点である．
 \end{que}
 
@@ -281,9 +279,9 @@ labelindent = \parindent
   逆に，\cref{eq:varpointlocus}を満たす2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
   のいずれとも異なる任意の点$P = \coord{x,y}$に対し，
   \cref{eq:varpointinv}で定められる点$Q = \coord{s, t}$
-  は2点$O, A$のいずれとも異なり，かつ$C$上の点である．
-  
-  以上より，$Q$が3点$O,A,Q$が一直線上にないような$C$上の点全体を動くとき，
+  は2点$O, A$のいずれとも異なる$C$上の点であり，3点$O,A,Q$は三角形をなす．
+
+  以上より，$Q$が3点$O,A,Q$が三角形をなすような$C$上の点全体を動くとき，
   $\triangle OAQ$の重心の軌跡は点$\coord{2, 0}$を中心とする半径$\frac{4}{9}$
   の円から2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$を除いた部分である．
 \end{ans}
@@ -303,6 +301,20 @@ labelindent = \parindent
 どのようにして構成すればよいかは前半の議論でほとんど明らかになっているため，
 それをトレースするのみである．
 
+写像の言葉を用いれば上記の議論をもっとすっきりと記述できる．
+3点$O,A,Q$が三角形をなすような$C$上の点$Q$全体の集合を$X$とし，$Q \in X$に対して
+$\triangle OAQ$の重心を対応させるような$\Real^2$への写像を
+$f \colon X \to \Real^2$とすれば，
+\cref{que:varpoint}は$f$の値域$\Image f$を求めよという問題にほかならない．
+$\Image f = Y$を示すためには，すべての対象$P$に対して
+\begin{align}
+  P \in \Image f \equivalent P \in Y
+  \label{eq:imageiquiv}
+\end{align}
+を示せばよいのであった．解答を考え始める段階では$Y$がどのような集合であるかは
+わからないのだから，まずは$P \in \Image f$を仮定するのはごく自然であろう．
+それさえわかればあとはほとんど単純作業である．
+
 なお，\cref{ans:varpoint}を\cref{ans:aplloniusomit}のように前半と後半の議論を同時に行うことは
 できなくもないがやたら記述が複雑になるのでオススメしない．
 
@@ -310,9 +322,10 @@ labelindent = \parindent
 
 \section{逆像法とパラメータ表示}
 
-最後に，受験業界でよく逆像法などと呼ばれている手法とパラメータ表示に関して少しだけ議論することとする．
+最後に，受験業界でよく「逆像法」などと呼ばれている手法とパラメータ表示に関して少しだけ議論することとする．
 逆像法に関しては，筆者に言わせればなぜいちいち名前をつけなければならないのかよくわからない程度には
-自然なテクニックである．実は\cref{ans:varpoint}の後半の議論は逆像法に近い議論の進め方をしている．
+自然なテクニックである．実は\cref{ans:varpoint}の後半の議論は
+よく受験業界で「逆像法」と呼ばれているものとほとんど同じ議論の進め方をしている．
 
 まずは逆像法から始めよう．何が逆像法かは正直どうでもよいので特に解説はしない．
 
@@ -332,8 +345,7 @@ labelindent = \parindent
 これくらい単純な議論で済む場合にはこの型で議論を進めた方が簡潔でわかりやすいであろう．
 
 最後にパラメータ表示を一例だけ扱おう．
-パラメータ表示は高校の教科書では媒介変数表示などと書かれているようであるが，
-いい加減用語を書き換えるべきだと思う．
+パラメータ表示は高校の教科書では媒介変数表示などと書かれているようである．
 
 \begin{que} \label{que:parameter}
   $t$が実数全体を動くとき，
@@ -366,8 +378,8 @@ labelindent = \parindent
 
   また，$x \neq -1$と\cref{eq:parametercurve}を満たす任意の点$\coord{x, y}$に対し，
   実数$t$を\cref{eq:parametert}によって定めれば，
-  $t^2 = \frac{y^2}{\paren*{1 + x}^2} = \frac{\paren*{1 - x^2}}{\paren*{1 + x}^2} 
-  = \frac{\paren*{1 - x}}{\paren*{1 + x}}$より$x = \frac{\paren*{1 - t^2}}{\paren*{1 + t^2}}$
+  $t^2 = \frac{y^2}{\paren*{1 + x}^2} = \frac{\paren*{1 - x^2}}{\paren*{1 + x}^2}
+    = \frac{\paren*{1 - x}}{\paren*{1 + x}}$より$x = \frac{\paren*{1 - t^2}}{\paren*{1 + t^2}}$
   が成り立ち，さらに$y = t \paren{1 + x} = \frac{\paren*{2t}}{\paren*{1 + t^2}}$だから
   \cref{eq:parameter}が成り立っていることがわかる．
 
@@ -378,4 +390,6 @@ labelindent = \parindent
 この逆の議論をすっぽかしている参考書が非常に多い．
 主にある条件を満たす点や実数の存在によって規定される点の軌跡を求める際に
 間違える参考書が多いようである．
+
+なお，\cref{que:parameter}も$\Real$から$\Real^2$へのある写像の値域を求める問題と考えることができる．
 \end{document}
