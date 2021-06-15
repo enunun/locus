@@ -65,20 +65,20 @@ labelindent = \parindent
 なお，高校の教科書における流儀とは異なる部分が多数見られるので注意せよ．
 
 \begin{itemize}
-  \item 点を表す記号は高校の教科書ではローマン体で$\mathrm{A}, \mathrm{B}, \dotsc$のように
-        書かれることが多いが，この記事では通常の変数と同じく$A,B, \dotsc$のようにイタリック体で表記する．
-  \item なんらかの対象に関する条件$\varphi$に対し，対象$x$が条件$\varphi$を満たすという主張を$\apply{\varphi}{x}$と表す．
-  \item 集合$S$と条件$\varphi$に対し，$\varphi$を満たす$S$の元全体の集合を$\setintension{x \in S}{\apply{\varphi}{x}}$と表す．
-  \item 平面上の点$A,B$に対し，線分$AB$の長さを$\length{AB}$と表す．$\length{AB}$は$A,B$の距離に相当する．
-  \item 実数全体の集合を$\Real$で，（ユークリッド）平面を$\Real ^2$でそれぞれ表す．
-        $x \in \Real$は$x$が実数であることを，$P \in \Real ^2$は$P$が平面上の点であることをそれぞれ表す．
-  \item 「座標が$\coord{a,b}$であるような点$P$」を高校の教科書ではよく「点$P{\coord{a,b}}$」などと表すようであるが，
-        この記事では「$P = \coord{a,b}$」と表すこととする．
-  \item 2つの主張$\varphi, \psi$について，$\varphi$が真であるならば必ず$\psi$も真であること，
-        および$\varphi$と$\psi$が同値であることをそれぞれ$\varphi \implies \psi$と$\varphi \equivalent \psi$で表す．
-  \item $x < y$または$x = y$であることを表す不等号として$x \leq y$を用いる．
-  \item この記事では，特に断らない限り「平面上の点」を単に「点」と表すことがある．
-  \item 集合と写像に関する基本的な知識や記法は既知とする．また，写像$f$の値域を$\Image f$と表す．
+	\item 点を表す記号は高校の教科書ではローマン体で$\mathrm{A}, \mathrm{B}, \dotsc$のように
+	      書かれることが多いが，この記事では通常の変数と同じく$A,B, \dotsc$のようにイタリック体で表記する．
+	\item なんらかの対象に関する条件$\varphi$に対し，対象$x$が条件$\varphi$を満たすという主張を$\apply{\varphi}{x}$と表す．
+	\item 集合$S$と条件$\varphi$に対し，$\varphi$を満たす$S$の元全体の集合を$\setintension{x \in S}{\apply{\varphi}{x}}$と表す．
+	\item 平面上の点$A,B$に対し，線分$AB$の長さを$\length{AB}$と表す．$\length{AB}$は$A,B$の距離に相当する．
+	\item 実数全体の集合を$\Real$で，（ユークリッド）平面を$\Real ^2$でそれぞれ表す．
+	      $x \in \Real$は$x$が実数であることを，$P \in \Real ^2$は$P$が平面上の点であることをそれぞれ表す．
+	\item 「座標が$\coord{a,b}$であるような点$P$」を高校の教科書ではよく「点$P{\coord{a,b}}$」などと表すようであるが，
+	      この記事では「$P = \coord{a,b}$」と表すこととする．
+	\item 2つの主張$\varphi, \psi$について，$\varphi$が真であるならば必ず$\psi$も真であること，
+	      および$\varphi$と$\psi$が同値であることをそれぞれ$\varphi \implies \psi$と$\varphi \equivalent \psi$で表す．
+	\item $x < y$または$x = y$であることを表す不等号として$x \leq y$を用いる．
+	\item この記事では，特に断らない限り「平面上の点」を単に「点」と表すことがある．
+	\item 集合と写像に関する基本的な知識や記法は既知とする．また，写像$f$の値域を$\Image f$と表す．
 \end{itemize}
 
 
@@ -92,22 +92,22 @@ labelindent = \parindent
 以下のように定義しておくと便利である．
 
 \begin{dfn} \label{dfn:locus}
-  平面$\Real ^2$上の点に関する条件$\varphi$が与えられたとする．
-  このとき，$\varphi$を満たす点全体の集合，すなわち，集合
-  \begin{align}
-    \setintension{P \in \Real ^2}{\apply{\varphi}{P}}
-    \label{eq:locus}
-  \end{align}
-  を（平面上における）$\varphi$を満たす点の\definition{軌跡}%
-  \footnote{%
-    「$\apply{\varphi}{P}$を満たす点$P$の軌跡」などと表記することもある．%
-  }%
-  という．
+	平面$\Real ^2$上の点に関する条件$\varphi$が与えられたとする．
+	このとき，$\varphi$を満たす点全体の集合，すなわち，集合
+	\begin{align}
+		\setintension{P \in \Real ^2}{\apply{\varphi}{P}}
+		\label{eq:locus}
+	\end{align}
+	を（平面上における）$\varphi$を満たす点の\definition{軌跡}%
+	\footnote{%
+		「$\apply{\varphi}{P}$を満たす点$P$の軌跡」などと表記することもある．%
+	}%
+	という．
 \end{dfn}
 
 \begin{ex} \label{ex:circle}
-  正の実数$r$と点$C$が与えられたとき，$\length{CP} = r$を満たす点全体の集合は$C$を中心とする半径$r$の円である．
-  このことは「$\length{CP} = r$を満たす点の軌跡は$C$を中心とする半径$r$の円である」と表記される．
+	正の実数$r$と点$C$が与えられたとき，$\length{CP} = r$を満たす点全体の集合は$C$を中心とする半径$r$の円である．
+	このことは「$\length{CP} = r$を満たす点の軌跡は$C$を中心とする半径$r$の円である」と表記される．
 \end{ex}
 
 \section{軌跡の求め方}
@@ -118,26 +118,26 @@ labelindent = \parindent
 ここからは問題形式で話を進めることとしよう．
 
 \begin{que} \label{que:apollonius}
-  平面上に2点$A = \coord{-2, 0}$と$B = \coord{4, 0}$がある．$\length{AP} : \length{BP} = 2 : 1$を満たす
-  点$P$の軌跡を求めよ．
+	平面上に2点$A = \coord{-2, 0}$と$B = \coord{4, 0}$がある．$\length{AP} : \length{BP} = 2 : 1$を満たす
+	点$P$の軌跡を求めよ．
 \end{que}
 
 \begin{ans} \label{ans:apollonius}
-  $\length{AP} : \length{BP} = 2 : 1$を満たす平面上の任意の点$P = \coord{x,y}$に対し，
-  $\length{AP}^2 = 4 \length{BP}^2$だから
-  \begin{align*}
-    \paren{x + 2}^2 + y^2 & = 4\paren{\paren{x - 4}^2 + y^2
-    }\end{align*}
-  より
-  \begin{align}
-    \paren{x - 6}^2 + y^2 = 16
-    \label{eq:apollonius}
-  \end{align}
-  が成り立つ．
-  また，\cref{eq:apollonius}を満たす任意の点$P = \coord{x,y}$は上の計算を逆にたどることによって
-  $\length{AP} : \length{BP} = 2 : 1$を満たすことがわかる．
-  ゆえに$\length{AP} : \length{BP} = 2 : 1$を満たす点$P$の軌跡は
-  点$\coord{6,0}$を中心とする半径4の円である．
+	$\length{AP} : \length{BP} = 2 : 1$を満たす平面上の任意の点$P = \coord{x,y}$に対し，
+	$\length{AP}^2 = 4 \length{BP}^2$だから
+	\begin{align*}
+		\paren{x + 2}^2 + y^2 & = 4\paren{\paren{x - 4}^2 + y^2
+		}\end{align*}
+	より
+	\begin{align}
+		\paren{x - 6}^2 + y^2 = 16
+		\label{eq:apollonius}
+	\end{align}
+	が成り立つ．
+	また，\cref{eq:apollonius}を満たす任意の点$P = \coord{x,y}$は上の計算を逆にたどることによって
+	$\length{AP} : \length{BP} = 2 : 1$を満たすことがわかる．
+	ゆえに$\length{AP} : \length{BP} = 2 : 1$を満たす点$P$の軌跡は
+	点$\coord{6,0}$を中心とする半径4の円である．
 \end{ans}
 
 \Cref{que:apollonius}にあるような条件が与えられたとしても，その条件を満たす点の軌跡がどのようなものであるかは
@@ -147,29 +147,29 @@ labelindent = \parindent
 必ず$\paren{x - 6} + y^2 = 16$を満たさなければならないということがわかったのであった．
 これは，平面上の任意の点$P = \coord{x,y}$が
 \begin{align}
-  \length{AP} : \length{BP} = 2 : 1 \implies \paren{x - 6}^2 + y^2 = 16
-  \label{eq:apolloniusimplies}
+	\length{AP} : \length{BP} = 2 : 1 \implies \paren{x - 6}^2 + y^2 = 16
+	\label{eq:apolloniusimplies}
 \end{align}
 を満たすことに相当する．
 このことから，
 \begin{align}
-  \setintension{P \in \Real ^2}{\length{AP} : \length{BP} = 2 : 1} \subset
-  \setintension{\coord{x,y} \in \Real^2}{\paren{x - 6}^2 + y^2 = 16}
-  \label{eq:apolloniussubset}
+	\setintension{P \in \Real ^2}{\length{AP} : \length{BP} = 2 : 1} \subset
+	\setintension{\coord{x,y} \in \Real^2}{\paren{x - 6}^2 + y^2 = 16}
+	\label{eq:apolloniussubset}
 \end{align}
 であることがわかる．
 次に考えなければならないのは，\cref{eq:apolloniussubset}を逆にした
 \begin{align}
-  \setintension{\coord{x,y} \in \Real^2}{\paren{x - 6}^2 + y^2 = 16} \subset
-  \setintension{P \in \Real ^2}{\length{AP} : \length{BP} = 2 : 1}
-  \label{eq:apolloniussubsetinv}
+	\setintension{\coord{x,y} \in \Real^2}{\paren{x - 6}^2 + y^2 = 16} \subset
+	\setintension{P \in \Real ^2}{\length{AP} : \length{BP} = 2 : 1}
+	\label{eq:apolloniussubsetinv}
 \end{align}
 が成り立つかどうかである．
 \Cref{eq:apolloniussubsetinv}を示すためには
 平面上の任意の点$P = \coord{x,y}$に対して
 \begin{align}
-  \paren{x - 6}^2 + y^2 = 16 \implies \length{AP} : \length{BP} = 2 : 1
-  \label{eq:aplloniusimpliesinv}
+	\paren{x - 6}^2 + y^2 = 16 \implies \length{AP} : \length{BP} = 2 : 1
+	\label{eq:aplloniusimpliesinv}
 \end{align}
 を示せばよい．すなわち，$\paren{x - 6}^2 + y^2 = 16$である点$P = \coord{x, y}$が
 つねに$\length{AP} : \length{BP} = 2 : 1$を満たすことを示せばよい．
@@ -177,9 +177,9 @@ labelindent = \parindent
 行った計算をそのまま逆にたどればすぐにわかる．
 以上をもって
 \begin{align}
-  \setintension{\coord{x,y} \in \Real^2}{\paren{x - 6}^2 + y^2 = 16} =
-  \setintension{P \in \Real ^2}{\length{AP} : \length{BP} = 2 : 1}
-  \label{eq:apolloniusequal}
+	\setintension{\coord{x,y} \in \Real^2}{\paren{x - 6}^2 + y^2 = 16} =
+	\setintension{P \in \Real ^2}{\length{AP} : \length{BP} = 2 : 1}
+	\label{eq:apolloniusequal}
 \end{align}
 が成り立つことがわかったので，$\length{AP} : \length{BP} = 2 : 1$を満たす
 点$P$の軌跡は点$\coord{6, 0}$を中心とする半径$4$の円であることが結論されるのである．
@@ -190,46 +190,46 @@ labelindent = \parindent
 このことに着目すれば，次のようにして解答を大幅に省略できる．
 
 \begin{ans} \label{ans:aplloniusomit}
-  平面上の任意の点$P = \coord{x,y}$に対し，
-  \begin{align*}
-                & \length{AP} : \length{BP} = 2 : 1                       \\
-    \equivalent & \length{AP}^2 = 4 \length{BP}^2                         \\
-    \equivalent & \paren{x + 2}^2 + y^2 = 4 \paren{\paren{x - 4}^2 + y^2} \\
-    \equivalent & \paren{x - 6}^2 + y^2 = 16
-  \end{align*}
-  であるから，$\length{AP} : \length{BP} = 2 : 1$を満たす点$P$の軌跡は
-  点$\coord{6, 0}$を中心とする半径$4$の円である．
+	平面上の任意の点$P = \coord{x,y}$に対し，
+	\begin{align*}
+		            & \length{AP} : \length{BP} = 2 : 1                       \\
+		\equivalent & \length{AP}^2 = 4 \length{BP}^2                         \\
+		\equivalent & \paren{x + 2}^2 + y^2 = 4 \paren{\paren{x - 4}^2 + y^2} \\
+		\equivalent & \paren{x - 6}^2 + y^2 = 16
+	\end{align*}
+	であるから，$\length{AP} : \length{BP} = 2 : 1$を満たす点$P$の軌跡は
+	点$\coord{6, 0}$を中心とする半径$4$の円である．
 \end{ans}
 
 
 直接的に軌跡とは書いてはいないが，実質的に軌跡を求めることに相当するような問題についても考えよう．
 
 \begin{que} \label{que:vertbisector}
-  原点$O$と点$A = \coord{2, 2}$に対し，線分$OA$の垂直二等分線の方程式を求めよ．
+	原点$O$と点$A = \coord{2, 2}$に対し，線分$OA$の垂直二等分線の方程式を求めよ．
 \end{que}
 
 \begin{ans} \label{ans:vertbisector}
-  線分$OA$の垂直二等分線上の任意の点$P = \coord{x, y}$に対し，
-  $\length{OP} = \length{AP}$が成り立つから$\length{OP}^2 = \length{AP}^2$
-  より
-  \begin{align}
-    x + y - 2 = 0
-    \label{eq:vertbisector}
-  \end{align}
-  が成り立つ．
-  また，\cref{eq:vertbisector}を満たす任意の点$P = \coord{x, y}$に対し，
-  上の計算を逆にたどることによって$\length{OP} = \length{AP}$が成り立つことがわかる．
-  ゆえに，$P$は線分$OA$の中点であるか，さもなくば$\triangle OAP$が$\length{OP} = \length{OA}$
-  の二等辺三角形であるかのいずれかであり，いずれにせよ点$P$は線分$OA$の垂直二等分線上の点である．
-  従って線分$OA$の垂直二等分線の方程式は\cref{eq:vertbisector}で与えられる．
+	線分$OA$の垂直二等分線上の任意の点$P = \coord{x, y}$に対し，
+	$\length{OP} = \length{AP}$が成り立つから$\length{OP}^2 = \length{AP}^2$
+	より
+	\begin{align}
+		x + y - 2 = 0
+		\label{eq:vertbisector}
+	\end{align}
+	が成り立つ．
+	また，\cref{eq:vertbisector}を満たす任意の点$P = \coord{x, y}$に対し，
+	上の計算を逆にたどることによって$\length{OP} = \length{AP}$が成り立つことがわかる．
+	ゆえに，$P$は線分$OA$の中点であるか，さもなくば$\triangle OAP$が$\length{OP} = \length{OA}$
+	の二等辺三角形であるかのいずれかであり，いずれにせよ点$P$は線分$OA$の垂直二等分線上の点である．
+	従って線分$OA$の垂直二等分線の方程式は\cref{eq:vertbisector}で与えられる．
 \end{ans}
 
 \Cref{ans:vertbisector}の議論の進め方が\cref{ans:apollonius}とまったく同じであることは
 いうまでもない%
 \footnote{%
-  そこそこ有名な大学受験対策サイトに「『軌跡を求めよ』ではなく『方程式を求めよ』なのだから
-  逆の確認（\cref{ans:vertbisector}での「または」からの部分）はしなくてもよい」
-  などと書いてあったのだが，もちろんそんなことはない．
+	そこそこ有名な大学受験対策サイトに「『軌跡を求めよ』ではなく『方程式を求めよ』なのだから
+	逆の確認（\cref{ans:vertbisector}での「または」からの部分）はしなくてもよい」
+	などと書いてあったのだが，もちろんそんなことはない．
 }%
 ．
 もちろん\cref{ans:aplloniusomit}のような形式の解答も述べることができるが，いちいち書く必要はないだろう．
@@ -237,52 +237,52 @@ labelindent = \parindent
 もう少し状況を複雑にして考えてみよう．このあたりから市販の参考書に間違いが多くなってくる．
 
 \begin{que} \label{que:varpoint}
-  点$\coord{2,0}$を中心とする半径2の円$C$と点$A = \coord{4,0}$がある．
-  3点$O,A,Q$が三角形をなすような$C$上の点全体を$Q$が動くとき，
-  $\triangle OAQ$の重心の軌跡を求めよ．ただし$O$は原点である．
+	点$\coord{2,0}$を中心とする半径2の円$C$と点$A = \coord{4,0}$がある．
+	3点$O,A,Q$が三角形をなすような$C$上の点全体を$Q$が動くとき，
+	$\triangle OAQ$の重心の軌跡を求めよ．ただし$O$は原点である．
 \end{que}
 
 \begin{ans} \label{ans:varpoint}
-  $C$と直線$OA$の交点は2点$O, A$である．
-  これ以外の$C$上の任意の点$Q = \coord{s, t}$に対し，
-  \begin{align}
-    \paren{s - 2}^2 + t^2 = 4
-    \label{eq:varcond}
-  \end{align}
-  が成り立つ．
-  いま，$\triangle OAQ$の重心を$P = \coord{x, y}$とおくと，
-  \begin{align}
-    \begin{aligned}
-      x & = \frac{s + 4}{3}, \\
-      y & = \frac{t}{3}
-    \end{aligned}
-    \label{eq:varpoint}
-  \end{align}
-  であるから
-  \begin{align}
-    \begin{aligned}
-      s & = 3x - 4, \\
-      t & = 3y
-    \end{aligned}
-    \label{eq:varpointinv}
-  \end{align}
-  であり，これを\cref{eq:varcond}に代入して
-  \begin{align}
-    \paren{x - 2}^2 + y^2 = \frac{4}{9}
-    \label{eq:varpointlocus}
-  \end{align}
-  を得る．また，$Q$は$O,A$のいずれとも異なる点であるから，
-  \cref{eq:varpoint}より$P$は2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
-  のいずれとも異ならなければならない．
+	$C$と直線$OA$の交点は2点$O, A$である．
+	これ以外の$C$上の任意の点$Q = \coord{s, t}$に対し，
+	\begin{align}
+		\paren{s - 2}^2 + t^2 = 4
+		\label{eq:varcond}
+	\end{align}
+	が成り立つ．
+	いま，$\triangle OAQ$の重心を$P = \coord{x, y}$とおくと，
+	\begin{align}
+		\begin{aligned}
+			x & = \frac{s + 4}{3}, \\
+			y & = \frac{t}{3}
+		\end{aligned}
+		\label{eq:varpoint}
+	\end{align}
+	であるから
+	\begin{align}
+		\begin{aligned}
+			s & = 3x - 4, \\
+			t & = 3y
+		\end{aligned}
+		\label{eq:varpointinv}
+	\end{align}
+	であり，これを\cref{eq:varcond}に代入して
+	\begin{align}
+		\paren{x - 2}^2 + y^2 = \frac{4}{9}
+		\label{eq:varpointlocus}
+	\end{align}
+	を得る．また，$Q$は$O,A$のいずれとも異なる点であるから，
+	\cref{eq:varpoint}より$P$は2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
+	のいずれとも異ならなければならない．
 
-  逆に，\cref{eq:varpointlocus}を満たす2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
-  のいずれとも異なる任意の点$P = \coord{x,y}$に対し，
-  \cref{eq:varpointinv}で定められる点$Q = \coord{s, t}$
-  は2点$O, A$のいずれとも異なる$C$上の点であって3点$O,A,Q$は三角形をなし，$P$はその重心である．
+	逆に，\cref{eq:varpointlocus}を満たす2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
+	のいずれとも異なる任意の点$P = \coord{x,y}$に対し，
+	\cref{eq:varpointinv}で定められる点$Q = \coord{s, t}$
+	は2点$O, A$のいずれとも異なる$C$上の点であって3点$O,A,Q$は三角形をなし，$P$はその重心である．
 
-  以上より，$Q$が3点$O,A,Q$が三角形をなすような$C$上の点全体を動くとき，
-  $\triangle OAQ$の重心の軌跡は点$\coord{2, 0}$を中心とする半径$\frac{4}{9}$
-  の円から2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$を除いた部分である．
+	以上より，$Q$が3点$O,A,Q$が三角形をなすような$C$上の点全体を動くとき，
+	$\triangle OAQ$の重心の軌跡は点$\coord{2, 0}$を中心とする半径$\frac{4}{9}$
+	の円から2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$を除いた部分である．
 \end{ans}
 
 \Cref{ans:varpoint}の「逆に」からの部分をサボる解説を非常によく見るのだが，
@@ -307,8 +307,8 @@ $f \colon X \to \Real^2$とすれば，
 \cref{que:varpoint}は$f$の値域$\Image f$を求めよという問題にほかならない．
 $\Image f = Y$を示すためには，すべての対象$P$に対して
 \begin{align}
-  P \in \Image f \equivalent P \in Y
-  \label{eq:imageiquiv}
+	P \in \Image f \equivalent P \in Y
+	\label{eq:imageiquiv}
 \end{align}
 を示せばよいのであった．解答を考え始める段階では$Y$がどのような集合であるかは
 わからないのだから，まずは$P \in \Image f$を仮定するのはごく自然であろう．
@@ -329,15 +329,15 @@ $\Image f = Y$を示すためには，すべての対象$P$に対して
 何が逆像法なのかは解説しない．
 
 \begin{que} \label{que:invimage}
-  点$\coord{x,y}$が平面上の点全体を動くとき，点$\coord{x+y, xy}$の軌跡を求めよ．
+	点$\coord{x,y}$が平面上の点全体を動くとき，点$\coord{x+y, xy}$の軌跡を求めよ．
 \end{que}
 
 \begin{ans} \label{ans:invimage}
-  平面上の任意の点$\coord{x,y}$に対し，$x = X + Y$と$y = XY$をともに満たす点$\coord{X,Y}$が存在するためには，
-  $u$の2次方程式$u^2 - xu + y = 0$が実数解をもつこと，すなわち$u$の2次多項式$u^2 - xu + y$の
-  判別式$D = x^2 - 4y$が負でないことが必要十分である．これが成り立つのは$y \leq \frac{x^2}{4}$のときである．
-  ゆえに点$\coord{x, y}$が平面上の点全体を動くとき，点$\coord{x+y, xy}$の軌跡は
-  放物線$y = \frac{x^2}{4}$上の点とその下側の点全体である．
+	平面上の任意の点$\coord{x,y}$に対し，$x = X + Y$と$y = XY$をともに満たす点$\coord{X,Y}$が存在するためには，
+	$u$の2次方程式$u^2 - xu + y = 0$が実数解をもつこと，すなわち$u$の2次多項式$u^2 - xu + y$の
+	判別式$D = x^2 - 4y$が負でないことが必要十分である．これが成り立つのは$y \leq \frac{x^2}{4}$のときである．
+	ゆえに点$\coord{x, y}$が平面上の点全体を動くとき，点$\coord{x+y, xy}$の軌跡は
+	放物線$y = \frac{x^2}{4}$上の点とその下側の点全体である．
 \end{ans}
 
 \Cref{ans:invimage}は\cref{ans:aplloniusomit}と同じ議論の進め方をしている．
@@ -346,43 +346,43 @@ $\Image f = Y$を示すためには，すべての対象$P$に対して
 最後に（曲線の）パラメータ表示を一例だけ扱おう．
 
 \begin{que} \label{que:parameter}
-  $t$が実数全体を動くとき，
-  \begin{align}
-    \begin{aligned}
-      x & = \frac{1 - t^2}{1 + t^2}, \\
-      y & = \frac{2t}{1 + t^2}
-    \end{aligned}
-    \label{eq:parameter}
-  \end{align}
-  を満たす点$\coord{x, y}$の軌跡を求めよ．
+	$t$が実数全体を動くとき，
+	\begin{align}
+		\begin{aligned}
+			x & = \frac{1 - t^2}{1 + t^2}, \\
+			y & = \frac{2t}{1 + t^2}
+		\end{aligned}
+		\label{eq:parameter}
+	\end{align}
+	を満たす点$\coord{x, y}$の軌跡を求めよ．
 \end{que}
 
 \begin{ans} \label{ans:parameter}
-  平面上の任意の点$\coord{x, y}$に対し，\cref{eq:parameter}を満たす実数$t$が存在したとする．
-  このとき，$x = \frac{\paren*{1 - t^2}}{\paren*{1 + t^2}}$より$x \neq -1$でなければならず，
-  さらに$t^2 = \frac{\paren*{1 - x}}{\paren*{1 + x}}$
-  である．ゆえに$y = \frac{\paren*{2t}}{\paren*{1 + t^2}}$から
-  \begin{align}
-    t = \frac{y}{1 + x}
-    \label{eq:parametert}
-  \end{align}
-  を得る．
-  これと$t^2 = \frac{\paren*{1 - x}}{\paren*{1 + x}}$より
-  \begin{align}
-    x^2 + y^2 = 1
-    \label{eq:parametercurve}
-  \end{align}
-  が成り立つ．
+	平面上の任意の点$\coord{x, y}$に対し，\cref{eq:parameter}を満たす実数$t$が存在したとする．
+	このとき，$x = \frac{\paren*{1 - t^2}}{\paren*{1 + t^2}}$より$x \neq -1$でなければならず，
+	さらに$t^2 = \frac{\paren*{1 - x}}{\paren*{1 + x}}$
+	である．ゆえに$y = \frac{\paren*{2t}}{\paren*{1 + t^2}}$から
+	\begin{align}
+		t = \frac{y}{1 + x}
+		\label{eq:parametert}
+	\end{align}
+	を得る．
+	これと$t^2 = \frac{\paren*{1 - x}}{\paren*{1 + x}}$より
+	\begin{align}
+		x^2 + y^2 = 1
+		\label{eq:parametercurve}
+	\end{align}
+	が成り立つ．
 
-  また，$x \neq -1$と\cref{eq:parametercurve}を満たす任意の点$\coord{x, y}$に対し，
-  実数$t$を\cref{eq:parametert}によって定めれば，
-  $t^2 = \frac{y^2}{\paren*{1 + x}^2} = \frac{\paren*{1 - x^2}}{\paren*{1 + x}^2}
-    = \frac{\paren*{1 - x}}{\paren*{1 + x}}$より$x = \frac{\paren*{1 - t^2}}{\paren*{1 + t^2}}$
-  が成り立ち，さらに$y = t \paren{1 + x} = \frac{\paren*{2t}}{\paren*{1 + t^2}}$だから
-  \cref{eq:parameter}が成り立っていることがわかる．
+	また，$x \neq -1$と\cref{eq:parametercurve}を満たす任意の点$\coord{x, y}$に対し，
+	実数$t$を\cref{eq:parametert}によって定めれば，
+	$t^2 = \frac{y^2}{\paren*{1 + x}^2} = \frac{\paren*{1 - x^2}}{\paren*{1 + x}^2}
+		= \frac{\paren*{1 - x}}{\paren*{1 + x}}$より$x = \frac{\paren*{1 - t^2}}{\paren*{1 + t^2}}$
+	が成り立ち，さらに$y = t \paren{1 + x} = \frac{\paren*{2t}}{\paren*{1 + t^2}}$だから
+	\cref{eq:parameter}が成り立っていることがわかる．
 
-  以上の議論により，$t$が実数全体を動くとき，\cref{eq:parameter}を満たす点$\coord{x,y}$
-  は円$x^2 + y^2 = 1$から点$\coord{-1, 0}$を除いた部分である．
+	以上の議論により，$t$が実数全体を動くとき，\cref{eq:parameter}を満たす点$\coord{x,y}$
+	は円$x^2 + y^2 = 1$から点$\coord{-1, 0}$を除いた部分である．
 \end{ans}
 
 この逆の議論をすっぽかしている参考書が非常に多い．
