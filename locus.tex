@@ -2,7 +2,7 @@
 \usepackage{luatexja-fontspec}
 \usepackage{amsthm}
 \usepackage{enumitem}
-\usepackage{sty/mathnotation}
+\usepackage{pkg/mathnotation}
 \usepackage[colorlinks=true,unicode,linkbordercolor={0 0 0}]{hyperref}
 \usepackage{amsmath,amssymb}
 \usepackage{cleveref}
@@ -51,14 +51,13 @@ labelindent = \parindent
 %
 \title{高校数学Ⅱの軌跡を完全に理解するための$n$問}
 \author{野口匠}
-\affil{高知工科大学大学院工学研究科}
-\date{\today}
+\date{2021年6月15日}
 
 \begin{document}
 %
 \maketitle
 
-この記事はMath Advent Calendar 2019 (\url{https://adventar.org/calendars/4297}) の19日目の記事です．
+この記事はMath Advent Calendar 2019 (\url{https://adventar.org/calendars/4297}) の19日目の記事です．（2021/06/15修正）
 
 \section{準備} \label{sec:pre}
 
@@ -74,7 +73,7 @@ labelindent = \parindent
   \item 実数全体の集合を$\Real$で，（ユークリッド）平面を$\Real ^2$でそれぞれ表す．
         $x \in \Real$は$x$が実数であることを，$P \in \Real ^2$は$P$が平面上の点であることをそれぞれ表す．
   \item 「座標が$\coord{a,b}$であるような点$P$」を高校の教科書ではよく「点$P{\coord{a,b}}$」などと表すようであるが，
-        この記事では「$P = \coord{a,b}$」と表すこととする．筆者個人としては「$P{\coord{a,b}}$」なる表記は意味がよくわからないので好きではない．
+        この記事では「$P = \coord{a,b}$」と表すこととする．
   \item 2つの主張$\varphi, \psi$について，$\varphi$が真であるならば必ず$\psi$も真であること，
         および$\varphi$と$\psi$が同値であることをそれぞれ$\varphi \implies \psi$と$\varphi \equivalent \psi$で表す．
   \item $x < y$または$x = y$であることを表す不等号として$x \leq y$を用いる．
@@ -239,7 +238,7 @@ labelindent = \parindent
 
 \begin{que} \label{que:varpoint}
   点$\coord{2,0}$を中心とする半径2の円$C$と点$A = \coord{4,0}$がある．
-  $Q$が3点$O,A,Q$が三角形をなすような$C$上の点全体を動くとき，
+  3点$O,A,Q$が三角形をなすような$C$上の点全体を$Q$が動くとき，
   $\triangle OAQ$の重心の軌跡を求めよ．ただし$O$は原点である．
 \end{que}
 
@@ -279,7 +278,7 @@ labelindent = \parindent
   逆に，\cref{eq:varpointlocus}を満たす2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
   のいずれとも異なる任意の点$P = \coord{x,y}$に対し，
   \cref{eq:varpointinv}で定められる点$Q = \coord{s, t}$
-  は2点$O, A$のいずれとも異なる$C$上の点であり，3点$O,A,Q$は三角形をなす．
+  は2点$O, A$のいずれとも異なる$C$上の点であって3点$O,A,Q$は三角形をなし，$P$はその重心である．
 
   以上より，$Q$が3点$O,A,Q$が三角形をなすような$C$上の点全体を動くとき，
   $\triangle OAQ$の重心の軌跡は点$\coord{2, 0}$を中心とする半径$\frac{4}{9}$
@@ -290,13 +289,13 @@ labelindent = \parindent
 明確な間違いであることはいうまでもない．
 
 さて，\cref{ans:varpoint}の各部分が何をしているのかを整理しよう．
-今回求めたのは，「$P$が$\triangle OAQ$の重心となるような3点$O,A,Q$が一直線上にないような$C$上の点$Q$が存在する」
+今回求めたのは，「$P$が$\triangle OAQ$の重心となる，3点$O,A,Q$が一直線上にないような$C$上の点$Q$が存在する」
 という条件を満たす点$P$の軌跡である．ゆえに問題文でも「軌跡」という用語を用いている．
 ゆえに前半では，上の条件を満たす点$Q$がうまくとれたことを前提にして議論を進めた．
 その結果そのような点$P$は\cref{eq:varpointlocus}を満たし，
 かつ2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$のいずれとも異ならなければならないということがわかったのであった．
 後半では，\cref{eq:varpointlocus}を満たす2点$\coord{\frac{4}{3}, 0}, \coord{\frac{8}{3}, 0}$
-のいずれとも異なる点$P$すべてが「$P$が$\triangle OAQ$の重心となるような3点$O,A,Q$が一直線上にないような$C$上の点$Q$が存在する」
+のいずれとも異なる点$P$すべてが「$P$が$\triangle OAQ$の重心となる，3点$O,A,Q$が一直線上にないような$C$上の点$Q$が存在する」
 という条件を満たすことを確かめるため，そのような点$Q$を実際に構成してみせた．
 どのようにして構成すればよいかは前半の議論でほとんど明らかになっているため，
 それをトレースするのみである．
@@ -322,12 +321,12 @@ $\Image f = Y$を示すためには，すべての対象$P$に対して
 
 \section{逆像法とパラメータ表示}
 
-最後に，受験業界でよく「逆像法」などと呼ばれている手法とパラメータ表示に関して少しだけ議論することとする．
-逆像法に関しては，筆者に言わせればなぜいちいち名前をつけなければならないのかよくわからない程度には
-自然なテクニックである．実は\cref{ans:varpoint}の後半の議論は
+最後に，受験業界でよく「逆像法」と呼ばれている手法と（曲線の）パラメータ表示に関して少しだけ議論することとする．
+実は\cref{ans:varpoint}の後半の議論は
 よく受験業界で「逆像法」と呼ばれているものとほとんど同じ議論の進め方をしている．
 
-まずは逆像法から始めよう．何が逆像法かは正直どうでもよいので特に解説はしない．
+まずはいわゆる「逆像法」について解説する．筆者個人としては「逆像法」などという名前が必要だとは思えなかったので
+何が逆像法なのかは解説しない．
 
 \begin{que} \label{que:invimage}
   点$\coord{x,y}$が平面上の点全体を動くとき，点$\coord{x+y, xy}$の軌跡を求めよ．
@@ -344,8 +343,7 @@ $\Image f = Y$を示すためには，すべての対象$P$に対して
 \Cref{ans:invimage}は\cref{ans:aplloniusomit}と同じ議論の進め方をしている．
 これくらい単純な議論で済む場合にはこの型で議論を進めた方が簡潔でわかりやすいであろう．
 
-最後にパラメータ表示を一例だけ扱おう．
-パラメータ表示は高校の教科書では媒介変数表示などと書かれているようである．
+最後に（曲線の）パラメータ表示を一例だけ扱おう．
 
 \begin{que} \label{que:parameter}
   $t$が実数全体を動くとき，
@@ -391,5 +389,7 @@ $\Image f = Y$を示すためには，すべての対象$P$に対して
 主にある条件を満たす点や実数の存在によって規定される点の軌跡を求める際に
 間違える参考書が多いようである．
 
-なお，\cref{que:parameter}も$\Real$から$\Real^2$へのある写像の値域を求める問題と考えることができる．
+なお，\cref{que:parameter}も$\Real$から$\Real^2$へのある写像の値域を求める問題と考えることができる%
+\footnote{微分積分が絡む文脈では，むしろこう考えるほうが自然である．}%
+．
 \end{document}
